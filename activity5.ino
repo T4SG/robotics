@@ -20,7 +20,7 @@ bool IsWhite()
     return (sensors[0] < THRESHOLD || sensors[1] < THRESHOLD || sensors[2] < THRESHOLD || sensors[3] < THRESHOLD || sensors[4] < THRESHOLD);
  }
 void setup() {
-    lcd.print(“GO BRO!!!);
+    lcd.print("GO BRO!!!"");
     robot.init(2000);
     robot.calibrateLineSensors(IR_EMITTERS_ON);
     delay(200);

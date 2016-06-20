@@ -10,7 +10,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  buttons.waitForButton(ALL_BUTTONS);
+  buttons.waitForPress(ALL_BUTTONS);
   lcd.clear();          // clear the lcd screen
   lcd.print("Robots");  // Print "Robots" on the first line
   lcd.gotoXY(0, 1);     // Start printing on the second line of the screen
