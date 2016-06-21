@@ -1,10 +1,12 @@
 #include <OrangutanPushbuttons.h>
 #include <OrangutanBuzzer.h>
 #include <OrangutanLEDs.h>
+#include <OrangutanLCD.h>
 
 OrangutanPushbuttons buttons;
 OrangutanBuzzer buzzer;
 OrangutanLEDs lights;
+OrangutanLCD lcd;
 
 // everytime you say 'waitForNoteToEnd()' these two lines will run
 void waitForNoteToEnd() {
@@ -15,10 +17,11 @@ void waitForNoteToEnd() {
 }
 
 void setup() {
+  lcd.clear();
+  lcd.print("Music!");
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   buttons.waitForPress(ALL_BUTTONS);
 
   buzzer.playNote(NOTE_C(5), 400, 8);  // plays an 'A' for 1 second at a volume level of 8
