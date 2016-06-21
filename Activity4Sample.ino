@@ -1,10 +1,12 @@
 #include <OrangutanPushbuttons.h>
 #include <OrangutanBuzzer.h>
 #include <OrangutanLEDs.h>
+#include <OrangutanLCD.h>
 
 OrangutanLEDs lights;
 OrangutanPushbuttons buttons;
 OrangutanBuzzer buzzer;
+OrangutanLCD lcd;
 
 void waitForNoteToEnd() {
   while(OrangutanBuzzer::isPlaying());
@@ -12,6 +14,8 @@ void waitForNoteToEnd() {
 }
 
 void setup() {
+  lcd.clear();
+  lcd.print("Lights!");
 }
 
 void loop() {
@@ -23,6 +27,8 @@ void loop() {
   lights.red(LOW);  // turn red light off
 
   // Code for twinkle, twinkle little star
+  // Add in more code to control the LED lights
+  // while playing your song.
   buzzer.playNote(NOTE_C(5), 400, 8); // Twin-
   waitForNoteToEnd();
   buzzer.playNote(NOTE_C(5), 400, 8); // -kle,
