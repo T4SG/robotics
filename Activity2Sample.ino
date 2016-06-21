@@ -7,6 +7,8 @@ OrangutanLCD lcd;
 OrangutanPushbuttons buttons;
 
 void setup() {
+  lcd.clear();
+  lcd.print("Motors!");
 }
 
 void loop() { // run this code over and over again
